@@ -53,9 +53,8 @@
 
 
 //#############- PWM Empfang -#############
-const int pins[] = { 9,10,11,12,3,6,5,A0,4,A1,A2,A3 }; //channel pins
-//const int pins[] = { 9,10,11,12,13,6,A0,A1,A2,A3,5,4 }; //channel pins
-//const int pins[] = { 2,3,4,5,6,7,8,9,A0,A1,A2,A3}; //channel pins
+const int pins[] = { 9,10,11,12,13,6,5,A0,4,A1,A2,A3 }; //channel pins Version 2
+//const int pins[] = { 9,10,11,12,3,6,5,A0,4,A1,A2,A3 }; //channel pins Version 1
 const int multiChannelPin = 7; //array position des multiChannel pins
 int pulses[NUM_CHANNEL]; //pulslängen
 int mSync = 0; //sync status der multiChannel

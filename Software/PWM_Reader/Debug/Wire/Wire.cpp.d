@@ -1,7 +1,7 @@
-C:\Users\Alexander\ Miller\AppData\Local\Temp\VMBuilds\PWM_Reader\adafruit_adafruit_avr_protrinket5ftdi\Debug\Wire\Wire.cpp.o: \
- C:\Users\Alexander\ Miller\AppData\Local\arduino15\packages\adafruit\hardware\avr\1.4.12\libraries\Wire\Wire.cpp \
- C:\Users\Alexander\ Miller\AppData\Local\arduino15\packages\adafruit\hardware\avr\1.4.12\libraries\Wire\utility/twi.h \
- C:\Users\Alexander\ Miller\AppData\Local\arduino15\packages\adafruit\hardware\avr\1.4.12\libraries\Wire\Wire.h \
+C:\Users\Alexander\ Miller\AppData\Local\Temp\VMBuilds\PWM_Reader\uno\Debug\Wire\Wire.cpp.o: \
+ C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src\Wire.cpp \
+ C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src\utility/twi.h \
+ C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\Wire\src\Wire.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Stream.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Print.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/WString.h \

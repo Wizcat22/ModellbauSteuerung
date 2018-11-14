@@ -1,4 +1,4 @@
-C:\Users\Alexander\ Miller\AppData\Local\Temp\VMBuilds\PWM_Reader\adafruit_adafruit_avr_protrinket5ftdi\Debug\core\CDC.cpp.o: \
+C:\Users\Alexander\ Miller\AppData\Local\Temp\VMBuilds\PWM_Reader\uno\Debug\core\CDC.cpp.o: \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino\CDC.cpp \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino\USBAPI.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino\Arduino.h \
@@ -9,5 +9,4 @@ C:\Users\Alexander\ Miller\AppData\Local\Temp\VMBuilds\PWM_Reader\adafruit_adafr
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino\Stream.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino\Print.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino\Printable.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h
+ C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\standard/pins_arduino.h

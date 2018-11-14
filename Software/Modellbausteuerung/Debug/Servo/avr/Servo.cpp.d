@@ -1,4 +1,4 @@
-C:\Users\Alexander\ Miller\AppData\Local\Temp\VMBuilds\Modellbausteuerung\adafruit_adafruit_avr_protrinket5ftdi\Debug\Servo\avr\Servo.cpp.o: \
+C:\Users\Alexander\ Miller\AppData\Local\Temp\VMBuilds\Modellbausteuerung\uno\Debug\Servo\avr\Servo.cpp.o: \
  C:\Program\ Files\ (x86)\Arduino\libraries\Servo\src\avr\Servo.cpp \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/binary.h \
@@ -10,7 +10,6 @@ C:\Users\Alexander\ Miller\AppData\Local\Temp\VMBuilds\Modellbausteuerung\adafru
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Printable.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/USBAPI.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h \
+ C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\standard/pins_arduino.h \
  C:\Program\ Files\ (x86)\Arduino\libraries\Servo\src/Servo.h \
  C:\Program\ Files\ (x86)\Arduino\libraries\Servo\src/avr/ServoTimers.h

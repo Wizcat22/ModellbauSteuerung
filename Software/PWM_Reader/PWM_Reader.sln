@@ -5,8 +5,6 @@ VisualStudioVersion = 15.0.26430.6
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PWM_Reader", "PWM_Reader.vcxproj", "{D0696326-613A-4766-BA27-3389318527A2}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "PWM_Simulator", "..\..\..\..\Documents\Arduino\PWM_Simulator\PWM_Simulator.vcxproj", "{C5F80730-F44F-4478-BDAE-6634EFC2CA88}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -17,12 +15,11 @@ Global
 		{D0696326-613A-4766-BA27-3389318527A2}.Debug|x86.Build.0 = Debug|Win32
 		{D0696326-613A-4766-BA27-3389318527A2}.Release|x86.ActiveCfg = Release|Win32
 		{D0696326-613A-4766-BA27-3389318527A2}.Release|x86.Build.0 = Release|Win32
-		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.ActiveCfg = Debug|Win32
-		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Debug|x86.Build.0 = Debug|Win32
-		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.ActiveCfg = Release|Win32
-		{C5F80730-F44F-4478-BDAE-6634EFC2CA88}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8F15561-5A4E-41B9-8720-97B9EDF6086C}
 	EndGlobalSection
 EndGlobal

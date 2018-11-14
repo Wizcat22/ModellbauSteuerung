@@ -1,4 +1,4 @@
-C:\Users\Alexander\ Miller\AppData\Local\Temp\VMBuilds\PWM_Reader\adafruit_adafruit_avr_protrinket5ftdi\Debug\SPI\SPI.cpp.o: \
+C:\Users\Alexander\ Miller\AppData\Local\Temp\VMBuilds\PWM_Reader\uno\Debug\SPI\SPI.cpp.o: \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\SPI\src\SPI.cpp \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\libraries\SPI\src\SPI.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
@@ -11,5 +11,4 @@ C:\Users\Alexander\ Miller\AppData\Local\Temp\VMBuilds\PWM_Reader\adafruit_adafr
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Printable.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/USBAPI.h \
  C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\cores\arduino/Arduino.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs/pins_arduino.h \
- C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\eightanaloginputs/../standard/pins_arduino.h
+ C:\Program\ Files\ (x86)\Arduino\hardware\arduino\avr\variants\standard/pins_arduino.h
