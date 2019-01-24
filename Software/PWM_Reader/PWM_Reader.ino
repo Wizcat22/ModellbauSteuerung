@@ -44,7 +44,7 @@
 #endif //LOW_SPEED
 
 
-#define NUM_SLAVES 4
+#define NUM_SLAVES 2
 
 #define SERIAL_BAUD 19200
 
@@ -64,7 +64,7 @@ int time = 0; //Gemessene Zeit eines Channels
 
 //#############- I2C Sender -#############
 #ifdef I2C_MODE
-const uint8_t slaveAddr[] = { 8,9,10,11 }; //I2C-Addressen von allen slaves im bus
+const uint8_t slaveAddr[] = { 8,9 }; //I2C-Addressen von allen slaves im bus
 
 uint8_t slaveId = 0; //Slave der mit Daten versorgt werden soll
 #endif // I2C_MODE
