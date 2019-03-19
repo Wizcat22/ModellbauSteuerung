@@ -13,7 +13,7 @@
 #define CHANNEL_MAXIMUM 100
 #define CHANNEL_MINIMUM -100
 
-#define SLAVE_ID 9
+#define SLAVE_ID 8
 
 signed char channel_data[NUM_CHANNELS]; //pulslängen
 volatile byte pos;
@@ -34,6 +34,10 @@ Switch_class * tagfahrlicht;
 Switch_class * nebellicht;
 Switch_class * dachlampen;
 Switch_class * positionslampen;
+Switch_class * warnblinker_rechts;
+Switch_class * warnblinker_links;
+Switch_class * blinker_links_hinten;
+Switch_class * blinker_rechts_hinten;
 
 
 #endif // SLAVE_ID==8
@@ -55,6 +59,12 @@ Switch_class * rueckfahrlicht;
 Switch_class * nebelschlussleuchte;
 Switch_class * rundumlicht;
 //Switch_class * none3;
+
+Switch_class * warnblinker_rechts;
+Switch_class * warnblinker_links;
+Switch_class * blinker_links_hinten;
+Switch_class * blinker_rechts_hinten;
+
 
 #endif // SLAVE_ID==9
 
@@ -104,39 +114,46 @@ void setup()
 
 #if SLAVE_ID==8
 	//Normal_switch_class(int pin, int power, bool inverted, bool memory, int lower_limit, int upper_limit)
-	standlicht = new Normal_switch_class(3,20,false,true,50,100);
-	abblendlicht = new Normal_switch_class(4, 200, false,true, -100, -50);
-	lenkung = new Pwm_switch_class(5,false,0.4);
+	standlicht = new Normal_switch_class(3, 20, false, true, 50, 100);
+	abblendlicht = new Normal_switch_class(4, 200, false, true, -100, -50);
+	lenkung = new Pwm_switch_class(5, false, 0.4);
 	lenkung_2 = new Pwm_switch_class(6, false, 0.4);
-	fernlicht = new Normal_switch_class(2,255,false,true,50,100);
+	fernlicht = new Normal_switch_class(2, 255, false, true, 50, 100);
 	servo_2 = new Pwm_switch_class(9, false, 0.35);
 	fahrregler = new Pwm_switch_class(10, false, 0.5);
 	tagfahrlicht = new Normal_switch_class(11, 20, false, true, -100, -50);
-	blinker_rechts = new Toggle_switch_class(A3,255,false,50,100,500);
-	blinker_links = new Toggle_switch_class(A2, 255, false, -100, -50, 500);
+	blinker_rechts = new Toggle_switch_class(A3, 255, false, false, 10, 100, 500);
+	blinker_links = new Toggle_switch_class(A2, 255, false, false, -100, -10, 500);
 	innenbeleuchtung = new Normal_switch_class(A1, 255, false, true, 50, 100);
 	nebellicht = new Normal_switch_class(A0, 255, false, true, -100, -50);
 	dachlampen = new Normal_switch_class(7, 255, false, true, 50, 100);
 	positionslampen = new Normal_switch_class(8, 255, false, true, -100, -50);
+	warnblinker_rechts = new Toggle_switch_class(A3, 255, false, true, 50, 100, 500);
+	warnblinker_links = new Toggle_switch_class(A2, 255, false, true, 50, 100, 500);
+	blinker_links_hinten = new Toggle_switch_class(A2, 255, false, false, -100, -10, 500);
+	blinker_rechts_hinten = new Toggle_switch_class(A3, 255, false, false, -100, -10, 500);
 
 #endif // SLAVE_ID==8
 
 #if SLAVE_ID==9
 
 	//servo_0 = new Pwm_switch_class(3,false,0.5);
-	rueklicht = new Normal_switch_class(4,255,false,true,-100,-50);
+	rueklicht = new Normal_switch_class(4, 255, false, true, -100, -50);
 	//servo_1 = new Pwm_switch_class(5,false,0.5);
 	//servo_2 = new Pwm_switch_class(6,false,0.5);
 	//none
-	anhaengerkupplung = new Pwm_switch_class(9,false,0.5);
+	anhaengerkupplung = new Pwm_switch_class(9, false, 0.5);
 	//servo_4 = new Pwm_switch_class(10,false,0.5);
-	bremslicht = new Change_switch_class(11,255, false,1000);
-	blinker_rechts = new Toggle_switch_class(A3,255, false,50,100,500);
-	blinker_links = new Toggle_switch_class(A2,255, false,-100,-50,500);
-	rueckfahrlicht = new Normal_switch_class(A1,255, false,false,-100,-20);
-	nebelschlussleuchte = new Normal_switch_class(A0,255, false,true,-100,-50);
-	rundumlicht = new Normal_switch_class(7,255, false,true,50,100);
-	//none
+	bremslicht = new Change_switch_class(11, 255, false, 1000);
+	blinker_rechts = new Toggle_switch_class(A3, 255, false, false, 10, 100, 500);
+	blinker_links = new Toggle_switch_class(A2, 255, false, false, -100, -10, 500);
+	rueckfahrlicht = new Normal_switch_class(A1, 255, false, false, -100, -10);
+	nebelschlussleuchte = new Normal_switch_class(A0, 255, false, true, -100, -50);
+	rundumlicht = new Normal_switch_class(7, 255, false, true, 50, 100);
+	warnblinker_rechts = new Toggle_switch_class(A3, 255, false, true, 50, 100, 500);
+	warnblinker_links = new Toggle_switch_class(A2, 255, false, true, 50, 100, 500);
+	blinker_links_hinten = new Toggle_switch_class(A2, 255, false, false, -100, -10, 500);
+	blinker_rechts_hinten = new Toggle_switch_class(A3, 255, false, false, -100, -10, 500);
 
 #endif // SLAVE_ID==9
 
@@ -193,13 +210,13 @@ void loop()
 {
 
 #if SLAVE_ID==8
-	
+
 	standlicht->check(channel_data[13 - 1]);
 	abblendlicht->check(channel_data[13 - 1]);
 	lenkung->check(channel_data[4 - 1]);
-	lenkung_2->check(channel_data[3 - 1]);
+	lenkung_2->check(channel_data[2 - 1]);//3
 	fernlicht->check(channel_data[14 - 1]);
-	servo_2->check(channel_data[4 - 1]);
+	servo_2->check(channel_data[3 - 1]);//4
 	fahrregler->check(channel_data[1 - 1]);
 	tagfahrlicht->check(channel_data[15 - 1]);
 	blinker_rechts->check(channel_data[4 - 1]);
@@ -208,7 +225,12 @@ void loop()
 	nebellicht->check(channel_data[14 - 1]);
 	dachlampen->check(channel_data[16 - 1]);
 	positionslampen->check(channel_data[16 - 1]);
+	warnblinker_rechts->check(channel_data[17 - 1]);
+	warnblinker_links->check(channel_data[17 - 1]);
+	blinker_links_hinten->check(channel_data[1 - 1]);
+	blinker_rechts_hinten->check(channel_data[1 - 1]);
 	
+
 #endif // SLAVE_ID==8
 
 
@@ -222,6 +244,11 @@ void loop()
 	rueckfahrlicht->check(channel_data[1 - 1]);
 	nebelschlussleuchte->check(channel_data[17 - 1]);
 	rundumlicht->check(channel_data[17 - 1]);
+
+	warnblinker_rechts->check(channel_data[17 - 1]);
+	warnblinker_links->check(channel_data[17 - 1]);
+	blinker_links_hinten->check(channel_data[1 - 1]);
+	blinker_rechts_hinten->check(channel_data[1 - 1]);
 
 #endif // SLAVE_ID==9
 

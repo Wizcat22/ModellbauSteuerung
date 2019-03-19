@@ -19,9 +19,13 @@ class Toggle_switch_class : public Switch_class
 	 unsigned long wait_time_;
 	 unsigned long start_time_;
 	 int state_;
+	 bool memory_;
+	 void activate_memory();
+	 bool triggered_;
+	 bool test;
 
  public:
-	 Toggle_switch_class(int pin, int power, bool inverted, int lower_limit, int upper_limit, int time);
+	 Toggle_switch_class(int pin, int power, bool inverted, bool memory, int lower_limit, int upper_limit, int time);
 
 	 // Geerbt über Switch_class
 	 virtual bool check(int value) override;
